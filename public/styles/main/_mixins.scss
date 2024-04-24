@@ -1,0 +1,119 @@
+// maximum media query
+@mixin maxQuery($max-width) {
+    @media (max-width: #{$max-width}px) {
+        @content;
+    }
+}
+
+// minimum media query
+@mixin minQuery($min-width) {
+    @media (min-width: #{$min-width}px) {
+        @content;
+    }
+}
+
+// for common box
+@mixin box($value) {
+    width: #{$value}px;
+    min-width: #{$value}px;
+    height: #{$value}px;
+}
+
+
+@mixin background($color, $repeat, $position, $size) {
+    background-color: $color;
+    background-repeat: $repeat;
+    background-position: $position;
+    background-size: $size;
+}
+
+@mixin transition {
+    transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+  }
+  
+  @mixin shadowbot {
+    box-shadow: 0 2px 4px #c4c4c4;
+    -moz-box-shadow: 0 2px 4px #c4c4c4;
+    -webkit-box-shadow: 0 2px 4px #948d8d;
+    -ms-box-shadow: 0 2px 4px #c4c4c4;
+    -o-box-shadow: 0 2px 4px #c4c4c4;
+  }
+  
+  @mixin objectfitcover {
+    object-fit: cover;
+    -moz-object-fit: cover;
+    -webkit-object-fit: cover;
+    -ms-object-fit: cover;
+    -o-object-fit: cover;
+  }
+  
+  @mixin sitefont {
+    font-family: "Poppins", sans-serif;
+    color: $black;
+    -webkit-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-size: $fsize;
+    line-height: $fsize + 10;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  
+  @mixin verticalcenter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  @mixin bluegradient {
+    background: #014d98;
+    background: linear-gradient(
+      0deg,
+      rgba(1, 77, 152, 1) 0%,
+      rgba(1, 77, 152, 1) 100%
+    );
+  }
+  
+  @mixin borderRadius($topLeft, $topRight, $bottomLeft, $bottomRight) { 
+    border-top-left-radius: $topLeft;
+    border-top-right-radius: $topRight;
+    border-bottom-left-radius: $bottomLeft;
+    border-bottom-right-radius: $bottomRight;
+  }
+  
+  
+  //mixins for devices responsive
+  @mixin minMax($min, $max){
+    @media (min-width:$min) and (max-width:$max){
+      @content;
+    }
+  };
+  
+  @mixin min($min){
+    @media (min-width:$min){
+      @content;
+    }
+  };
+  
+  @mixin max($max) {
+    @media (max-width:$max){
+      @content;
+    }
+  };
+  
+  

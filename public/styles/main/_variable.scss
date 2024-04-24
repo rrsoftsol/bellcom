@@ -1,0 +1,43 @@
+
+
+// default root
+:root {
+	
+	--transition: all 0.5s ease-in-out;
+	
+	--p1: 207, 71, 40;
+	--s1: 254, 254, 254;
+	--a1: 162, 0, 29;
+	--a2: 255,242,240;
+	--a3: 108, 94, 203;
+	--a4: 10, 89, 78;
+	--a5: 82, 0, 15;
+	--nw1: 1, 1, 1;
+	--nw2: 182, 182, 182;
+	--nw3: 168, 173, 198;
+	--nw4: 160, 165, 168;
+	--nb1: 52, 56, 57;
+	--nb2: 35, 38, 39;
+	--nb3: 31, 31, 31;
+	--nb4: 254, 254, 254;
+
+}
+// font-family: "tabler-icons" !important;
+
+//variables
+$black: #000;
+$white: #fff;
+$blue: #0E4775;
+$red: #CF4827;
+$fsize: 15px;
+$gray: #1d1d1d;
+
+
+//devices breakpoints
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxxl: 1600px;
