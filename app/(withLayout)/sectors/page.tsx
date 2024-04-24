@@ -203,14 +203,14 @@ export default function page() {
                     <div className="row py-4 justify-content-center"> 
                         <div className="col-md-6 aos-item aos-init" data-aos="fade-up" data-aos-duration="1000">
                             <div className="whiteBox">
-                                <h3 className="pb-3 aos-item aos-init" data-aos="fade-up">Incrementa's tailored business (un)consulting solutions</h3>
-                                <p>We help business leaders, just like you, solve the problems you can’t. Be it developing your strategy, an operations issue, building a healthy culture or increasing your revenue, we end the frustration and help make your vision into a clear plan. Then we’ll work side-by-side to make that plan a reality.</p>
+                                <h3 className="pb-3 aos-item aos-init" data-aos="fade-up">Incrementa&apos;s tailored business (un)consulting solutions</h3>
+                                <p>We help business leaders, just like you, solve the problems you can&apos;t. Be it developing your strategy, an operations issue, building a healthy culture or increasing your revenue, we end the frustration and help make your vision into a clear plan. Then we&apos;ll work side-by-side to make that plan a reality.</p>
                             </div>
                         </div> 
                         <div className="col-md-6 align-self-center orangeSection aos-item aos-init" data-aos="fade-up" data-aos-duration="1000">                      
                                 <article>
                                     <h3 className="pb-3 aos-item aos-init" data-aos="fade-up">Are you ready to grow?</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                     <p className="aos-item aos-init" data-aos="fade-up" data-aos-delay="100"><a href="javascript:void(0)" className="link">Reach us <span className="icon-rightarrow icomoon"></span></a></p>
                                 </article>
                         </div> 

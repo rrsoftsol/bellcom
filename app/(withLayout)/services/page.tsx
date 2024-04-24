@@ -59,7 +59,7 @@ export default function page() {
                   environmental performance, to contributing a quarter of the
                   rolling stock engineering effort for a flagship rail program,
                   to developing a 100-ton cross-terrain truck crane for market
-                  in record time, we share our customers’ passion for
+                  in record time, we share our customers&apos; passion for
                   engineering excellence.
                 </p>
 
@@ -98,7 +98,7 @@ export default function page() {
                   environmental performance, to contributing a quarter of the
                   rolling stock engineering effort for a flagship rail program,
                   to developing a 100-ton cross-terrain truck crane for market
-                  in record time, we share our customers’ passion for
+                  in record time, we share our customers&apos; passion for
                   engineering excellence.
                 </p>
               </div>

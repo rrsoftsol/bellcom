@@ -13,7 +13,7 @@ export default function page() {
                  <article className="aos-item aos-init aos-animate" data-aos="zoom-out" data-aos-duration="1000">
                     <h2 className="h5 text-uppercase fred fsbold">Welcome to Bellcom</h2>
                     <h1 className="fbold">We shall stand by our promises</h1>
-                    <p className="flight">Bellcom has the distinction of being listed as ‘A Grade’ contractor</p>
+                    <p className="flight">Bellcom has the distinction of being listed as ‘A Grade&apos; contractor</p>
                 </article>
             </div>
         </div> 
@@ -28,11 +28,11 @@ export default function page() {
         /> 
                      </div>
                     <div className="col-md-6 align-self-center aos-item aos-init" data-aos="fade-up" data-aos-duration="1000">
-                        <h5>Where we 've Been</h5>
+                        <h5>Where we &apos;ve Been</h5>
                         <h3>Company Profile</h3>
                         <p>The importance of firm infrastructure for sustained economic growth and development is well recognized in India. Morgan Stanley, the global leader in financial services reports that India would become $5 trillion economy by 2025 and major impact will be seen in the areas of trade and infrastructure. At BELLCOM, infrastructure segment has gained momentum in the last few years and is experiencing a rapid growth across different sectors of infrastructure. The dynamics of this segment is entirely diversified from that of conventional projects across all the sectors.</p>
 
-                        <p>It needs requisite experience and a proven track record to meet such stringent constraints. BELLCOM’s forte lies in it’s a) Skilled, Highly experienced &amp; Qualified team b) Modern Equipment and Technology c) Relentless determination to deliver to-notch quality d) Strong Risk Management e) Adherence to timelines and delivery schedules d) Unwavering Commitment to its clients and Environment.</p>
+                        <p>It needs requisite experience and a proven track record to meet such stringent constraints. BELLCOM&apos;s forte lies in it&apos;s a) Skilled, Highly experienced &amp; Qualified team b) Modern Equipment and Technology c) Relentless determination to deliver to-notch quality d) Strong Risk Management e) Adherence to timelines and delivery schedules d) Unwavering Commitment to its clients and Environment.</p>
 
                         <p>We thankfully enjoy the unstinted support, trust and goodwill of our clients and they are our best brand ambassadors.  Led by a well experienced and professional team, BELLCOM was established on the pillars of quality.</p>
                         <p className="text-uppercase fbold lspacing aos-item aos-init" data-aos="fade-up" data-aos-duration="1000">15 YEARS IN <span className="flight">BUSINESS</span></p>
@@ -52,7 +52,7 @@ export default function page() {
                         <p>We the team at BELLCOM are committed to comply with the pre-requisites, project standards, safety standards and we seamlessly improvise the effectiveness of our quality management system.</p>
                         <h5>OUR COMMITMENT</h5>
                         <h3>Mission</h3>
-                        <p>Achieve excellence &amp; portray brilliance in every facet to meet our clients’ meticulous needs with regard to quality, on-time delivery, safety and environmental concerns.</p>
+                        <p>Achieve excellence &amp; portray brilliance in every facet to meet our clients&apos; meticulous needs with regard to quality, on-time delivery, safety and environmental concerns.</p>
 
                         <h3>Our Vision</h3>
                         <p>To serve with spirit and purpose that brings honour through innovation, prudence, persistent performance and to be the unparalleled provider of finest infrastructure development organization by improving quality relentlessly.</p>
