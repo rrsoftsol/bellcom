@@ -52,7 +52,7 @@ export default function MobileMenu({
         }`}>
                 <div className="bsnav-mobile-overlay"></div>
                 <div className="navbar"><ul className="navbar-nav navbar-mobile mr-0 topnav">                       
-                        <li className="nav-item"><a className="active" href="/about">About us</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/about">About us</a></li>
                         <li className="nav-item"><a className="nav-link" href="/careers">Careers</a></li>                        
                                              
                         <li className="nav-item socialNav">
@@ -61,7 +61,7 @@ export default function MobileMenu({
                             <a href="/" target="_blank" className="socialIcon"><span className="icon-twitter icomoon"></span></a>
                         </li>
                     </ul><ul className="navbar-nav navbar-mobile mr-0 bottomNav">
-                        <li className="nav-item"><a className="nav-link" href="/index">Home</a></li>                        
+                        <li className="nav-item"><a className="nav-link" href="/">Home</a></li>                        
                         <li className="nav-item"><a className="nav-link" href="/projects">Projects</a></li>
                         <li   className={`nav-item megamenu fadeup ${serviceOpen ? "active" : ""}`} onClick={() => setServiceOpen((prev) => !prev)}>
                           <a className="nav-link">Services <i className="caret"></i></a>                          

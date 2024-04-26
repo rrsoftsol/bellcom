@@ -389,6 +389,7 @@ header{
         width:212px;
 
         @include max($md){
+          height: auto;
           width:150px;
         }
       }
@@ -408,6 +409,7 @@ header{
 
   @include max($md){
     height:auto;
+    margin-top: 60px;
   }
 
   .slide__title{

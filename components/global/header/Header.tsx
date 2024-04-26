@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bsnav-sticky bsnav-sticky-slide">
+      <header  className={`bsnav-sticky bsnav-sticky-slide ${scroll ? " sticked in fixed-top" : ""}`}  >
         <div className="customContainer">
           <div className="navbar navbar-expand-md bsnav">
             <a className="navbar-brand" href="/">

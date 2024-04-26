@@ -594,7 +594,10 @@
 .dropdown.megamenu:focus > .navbar-nav{    
    margin-top: 0;
    visibility: visible !important;
-   opacity: 1 !important;
+   opacity: 1 !important;   
+   pointer-events: initial;
+   clip: rect(0, 50vw, 2000px, 0);
+   transition: 0.3s ease-in;
 }
 .dropdown.megamenu > .navbar-nav .navbar-nav {
     width: auto;
