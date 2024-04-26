@@ -43,7 +43,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
  
-
+body {
+    font-family: var(--poppins-font);
+   
+}
 .fsbold {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -394,9 +397,9 @@ header{
 }
 
 .homeSlider{
-  height:100vh;   
+  height:90vh;   
   width:100%;
-
+  margin-top: 100px;
   .slide{
       @include max($md){
       height:auto;
@@ -453,8 +456,8 @@ header{
     display:none;
   }
   .slidenav__item {   
-    width:48px;
-    height:48px;
+    width:36px;
+    height:36px;
     background:$red;
     border-radius:50%;
 
@@ -942,8 +945,7 @@ footer{
       letter-spacing: -2px;
     }
     h5{
-      font-size:$fsize;
-      color:$red;
+      font-size:$fsize; 
       @extend .fsbold;
       letter-spacing: 3px;
       text-transform: uppercase;   
@@ -1605,7 +1607,7 @@ footer{
 
 .slide {
 	width: 100%;
-	height: 100vh;
+	height: 90vh;
 	top: 0;
 	position: absolute;
 	display: grid;
@@ -1631,15 +1633,16 @@ footer{
 }
 
 .slide__img {
-	width: 100%;
+	width: 92%;
 	height: 100%;
-	left: 0;
+	right: 0;
 	top: 0;
 	background-size: cover;
 	background-position: 50% 50%;
 	position: absolute;
 	backface-visibility: hidden;
 	pointer-events: none;
+    border-top-left-radius: var(--bs-border-radius-xxl) !important;
 }
 
 .slide__img::after {
@@ -1725,8 +1728,8 @@ footer{
 	pointer-events: auto;
 	border: 0;
 	background: none;
-	padding: 1rem;
-	margin: 0.85rem;
+	padding: 0.25rem;
+	margin: 0.25rem 0.5rem;
 	text-transform: inherit;
 	position: relative;
 	line-height: 1;
@@ -1740,7 +1743,7 @@ footer{
 		margin: 0;
 	}
 	.slide {
-		height: 100vh;	
+		height: 90vh;	
 	}
 	.slide__img-wrap {
 		width: 100vw;
@@ -1913,6 +1916,12 @@ footer{
   
   /*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
   @media only screen and (max-width: 768px) {
+
+    
+.slide__img {
+	width: 100% !important;
+    border-radius: 0 !important;
+}
     ul.resp-tabs-list {
       display: none;
     }

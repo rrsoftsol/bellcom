@@ -4,6 +4,7 @@ import logo from "@/public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import AnimateHeight from "react-animate-height";
 
 export default function MobileMenu({
@@ -13,6 +14,11 @@ export default function MobileMenu({
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+
+  
+  const [serviceOpen, setServiceOpen] = useState(false);
+  const [sectorsOpen, setSectorOpen] = useState(false);
+
   const path = usePathname();
   const isHomePage = path === "/";
   const { toggle, handleToggle } = useToggle();
@@ -41,80 +47,146 @@ export default function MobileMenu({
   };
   return (
     <>
-      <div
-        className={`mobile-menu-area-bg ${
-          open ? "mobile-menu-show-bg" : "mobile-menu-collapse-bg"
-        } d-block d-lg-none`}
-      ></div>
-      <div
-        className={`mobile-menu-area ${
-          open ? "mobile-menu-show" : "mobile-menu-collapse"
-        } d-block d-lg-none`}
-      >
-        <div className="mobile-menu-top">
-          <Link href="/" className="d-flex justify-content-start gap-3">
-            <Image src={logo} className="logo " alt="logo" />
-          </Link>
-          <button onClick={() => setOpen(false)}>
-            <i className="ri-close-line text-white fs-two "></i>
-          </button>
-        </div>
-
-        <div className="mobile-nav">
-          <ul className="">
-            {headerMenu.map((menu, idx) => (
-              <li key={idx} className="">
-                {menu.isSubmenu ? (
-                  <div className="submenu">
-                    <button
-                      className={`${
-                        isMenuActive(menu) && "p1-color-important"
-                      } fs-four`}
-                      onClick={() => handleToggle(idx)}
-                    >
-                      {menu.name}
-                      <i className="ri-arrow-down-s-line"></i>
-                    </button>
-
-                    <AnimateHeight
-                      height={toggle === idx ? "auto" : 0}
-                      className="submenu-list"
-                    >
-                      <ul className="">
-                        {menu.submenu?.map(({ id, name, link }) => (
-                          <li key={id}>
-                            <Link
-                              href={link}
-                              onClick={() => setOpen(false)}
-                              className={` ${
-                                path === link ? "" : "nw2-text-color"
-                              } fs-six`}
-                            >
-                              {name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </AnimateHeight>
-                  </div>
-                ) : (
-                  <Link
-                    href={menu.link!}
-                    onClick={() => setOpen(false)}
-                    className={` ${
-                      path === menu.link
-                        ? "p1-color-important"
-                        : "nw2-text-color"
-                    } fs-four`}
-                  >
-                    {menu.name}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <div  className={`bsnav-mobile ${
+          open ? "in" : ""
+        }`}>
+                <div className="bsnav-mobile-overlay"></div>
+                <div className="navbar"><ul className="navbar-nav navbar-mobile mr-0 topnav">                       
+                        <li className="nav-item"><a className="active" href="/about">About us</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/careers">Careers</a></li>                        
+                                             
+                        <li className="nav-item socialNav">
+                            <a href="/" target="_blank" className="socialIcon"><span className="icon-facebook icomoon"></span></a>
+                            <a href="/" target="_blank" className="socialIcon"><span className="icon-linkedin icomoon"></span></a>
+                            <a href="/" target="_blank" className="socialIcon"><span className="icon-twitter icomoon"></span></a>
+                        </li>
+                    </ul><ul className="navbar-nav navbar-mobile mr-0 bottomNav">
+                        <li className="nav-item"><a className="nav-link" href="/index">Home</a></li>                        
+                        <li className="nav-item"><a className="nav-link" href="/projects">Projects</a></li>
+                        <li   className={`nav-item megamenu fadeup ${serviceOpen ? "active" : ""}`} onClick={() => setServiceOpen((prev) => !prev)}>
+                          <a className="nav-link">Services <i className="caret"></i></a>                          
+                            <div className="navbar-nav"  >
+                                 <div className="container">                                  
+                                    <div className="row mb-3 g-0">
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/services">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Engineering &amp; Design</span>
+                                            </a>
+                                        </div>  
+                                         <div className="col-md-6">
+                                           <a className="navsubItem" href="/services">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Project Management</span>
+                                            </a>
+                                        </div>
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/services">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Advisory &amp; Consultancy</span>
+                                            </a>
+                                        </div>
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/services">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Bid Management</span>
+                                            </a>
+                                        </div>
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/services">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Turn key Solutions</span>
+                                            </a>
+                                        </div>
+                                                                             
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li   className={`nav-item megamenu fadeup ${sectorsOpen ? "active" : ""}`}
+                         onClick={() => setSectorOpen((prev) => !prev)}><a className="nav-link" >Sectors <i className="caret"></i></a>
+                            <div className="navbar-nav">
+                                 <div className="container">                                  
+                                    <div className="row mb-3 g-0">
+                                     <div className="col-md-6">                                          
+                                           <a className="navsubItem" href="/sectors">
+                                              <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">All Sectors</span>
+                                            </a>
+                                        </div>  
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                                <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Civil Infra</span>
+                                            </a>
+                                        </div>  
+                                         <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Industrial Infra</span>
+                                            </a>
+                                        </div>
+                                         <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Power &amp; Energy</span>
+                                            </a>
+                                        </div>
+                                         <div className="col-md-6">
+                                           <a className="navsubItem" href="/healthCareSector">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Health Care</span>
+                                            </a>
+                                        </div>
+                                         <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Logistics</span>
+                                            </a>
+                                        </div>
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Chemicals</span>
+                                            </a>
+                                        </div>
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                                <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Defense</span>
+                                            </a>
+                                        </div>   
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Mining &amp; metallurgical Engineering</span>
+                                            </a>
+                                        </div>
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Engineering Services</span>
+                                            </a>
+                                        </div>
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Environment</span>
+                                            </a>
+                                        </div>
+                                        <div className="col-md-6">
+                                           <a className="navsubItem" href="/">
+                                               <i className="bi bi-arrow-right-short"></i>
+                                               <span className="navsubItemname">Geo-Spacial Solutions</span>
+                                            </a>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                        
+                        <li className="nav-item"><a className="nav-link" href="/contact">Contact</a></li> 
+                    </ul></div>
+            </div>
     </>
   );
 }

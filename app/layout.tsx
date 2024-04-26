@@ -18,8 +18,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bellcom - ",
-  description: "Bellcom"
+  title: "Bellcom - Home ",
+  description: "Welcome to Bellcom"
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${openSans.variable}`}>
+      <body className={`__variable_4a3e9c ${poppins.variable} ${openSans.variable}`}>
         
         {children}
  

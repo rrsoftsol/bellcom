@@ -3,11 +3,18 @@
 
 import about01 from "@/public/images/about01.jpg"; 
 import chairman from "@/public/images/chairman.jpg"; 
+import Head from "next/head";
 
 import Image from "next/image";
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'About Bellcome',
+}
 export default function page() {
   return (
     <div className="subpage"> 
+      
         <div className="subpageHeader">
             <div className="customContainer">
                  <article className="aos-item aos-init aos-animate" data-aos="zoom-out" data-aos-duration="1000">

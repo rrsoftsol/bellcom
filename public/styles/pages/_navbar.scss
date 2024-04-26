@@ -589,6 +589,13 @@
     padding: 15px;
     right: 0;
 }
+.dropdown.megamenu:hover > .navbar-nav,
+.dropdown.megamenu:active > .navbar-nav ,
+.dropdown.megamenu:focus > .navbar-nav{    
+   margin-top: 0;
+   visibility: visible !important;
+   opacity: 1 !important;
+}
 .dropdown.megamenu > .navbar-nav .navbar-nav {
     width: auto;
     position: initial;
